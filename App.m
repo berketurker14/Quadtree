@@ -1,19 +1,22 @@
 clc;clear;
-% Create a quadtree and subdivide it
+
 root = Quadtree(0, 1, 0, 1, 1);
-root.levelUp(); % now root has 4 meshes
+root.levelUp(); 
 
-% Access the meshList
-meshListLevelOne = root.meshList; % This gives you the list of level 1 meshes
-firstMesh = meshListLevelOne{1}; % This gives you the first mesh (southWest)
+%%
+meshListLevelOne = root.meshList; 
+firstMesh = meshListLevelOne{1}; % southWest
 
-% Level up the first mesh
-firstMesh.levelUp(); % now firstMesh has 4 sub-meshes
+
+firstMesh.levelUp(); 
 meshListLevelOne{2}.levelUp();
-% Access the new meshList
-meshListLevelTwo = firstMesh.meshList; % This gives you the list of level 2 meshes from the firstMesh
+
+%%
+meshListLevelTwo = firstMesh.meshList;
 meshListLevelTwo{2}.levelUp();
-% Visualize the quadtree
+
+
+%% Visualize the quadtree
 figure;
 hold on;
 visualizeQuadtree(root);

@@ -1,15 +1,15 @@
 classdef Quadtree < handle
     properties
-        northWest; % top left quadrant
-        northEast; % top right quadrant
-        southWest; % bottom left quadrant
-        southEast; % bottom right quadrant
+        northWest; %top left
+        northEast; %top right
+        southWest; %bottom left
+        southEast; %bottom right
         xmin; % minimum x coordinate
         xmax; % maximum x coordinate
         ymin; % minimum y coordinate
         ymax; % maximum y coordinate
-        level; % level of the node
-        meshList; % list of meshes
+        level; %level of the node
+        meshList; %list of meshes
     end
     
     methods
